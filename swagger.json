@@ -1,0 +1,763 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Stepapp"
+  },
+  "host": "0e3r24lsu5.execute-api.ap-south-1.amazonaws.com/Prod/",
+  "tags": null,
+  "Access-Control-Allow-Origin": "https://0e3r24lsu5.execute-api.ap-south-1.amazonaws.com/Prod/",
+  "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH",
+  "Access-Control-Allow-Headers": "Content-Type",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/getschoolinfo": {
+      "get": {
+        "tags": [
+          "School Api"
+        ],
+        "summary": "school api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "schoolId",
+            "in": "query",
+            "description": "school ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "boardId",
+            "in": "query",
+            "description": "board Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/getcontentinfo": {
+      "get": {
+        "tags": [
+          "content Api"
+        ],
+        "summary": "content api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "boardId",
+            "in": "query",
+            "description": "board ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/getchapterwisetressure": {
+      "get": {
+        "tags": [
+          "chapter Api"
+        ],
+        "summary": "chapter api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "chapterId",
+            "in": "query",
+            "description": "chapter ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/studentgradesinfo": {
+      "get": {
+        "tags": [
+          "student Api"
+        ],
+        "summary": "student api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "user ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/getchapterwisecontent": {
+      "get": {
+        "tags": [
+          "chapter Api"
+        ],
+        "summary": "chapter api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "chapterId",
+            "in": "query",
+            "description": "chapter ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/conceptdetails": {
+      "get": {
+        "tags": [
+          "concept Api"
+        ],
+        "summary": "concept api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "conceptId",
+            "in": "query",
+            "description": "concept ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/topicdetails": {
+      "get": {
+        "tags": [
+          "topic Api"
+        ],
+        "summary": "topic api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "topicId",
+            "in": "query",
+            "description": "topic ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/gettopicwiseconceptvideo": {
+      "get": {
+        "tags": [
+          "School Api"
+        ],
+        "summary": "school api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "topicId",
+            "in": "query",
+            "description": "school ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/getgradeinfo": {
+      "get": {
+        "tags": [
+          "Grade Api"
+        ],
+        "summary": "Grade api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "schoolId",
+            "in": "query",
+            "description": "school ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "gradeId",
+            "in": "query",
+            "description": "grade Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/learning": {
+      "get": {
+        "tags": [
+          "Grade Api"
+        ],
+        "summary": "Grade api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "boardId",
+            "in": "query",
+            "description": "school ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "gradeId",
+            "in": "query",
+            "description": "grade Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": null,
+            "headers": null,
+            "Access-Control-Allow-Origin": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/gettopicinfo": {
+      "get": {
+        "tags": [
+          "topicwise api"
+        ],
+        "summary": "topicwise api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "schoolId",
+            "in": "query",
+            "description": "school ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "gradeId",
+            "in": "query",
+            "description": "grade Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "subjectId",
+            "in": "query",
+            "description": "subject Id ",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "chapterId",
+            "in": "query",
+            "description": "chapter Id ",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page  ",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "topicId",
+            "in": "query",
+            "description": "topic Id  ",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/getsubjectinfo": {
+      "get": {
+        "tags": [
+          "subjectapi"
+        ],
+        "summary": "subjectapi",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "schoolId",
+            "in": "query",
+            "description": "school ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "gradeId",
+            "in": "query",
+            "description": "grade Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "subjectId",
+            "in": "query",
+            "description": "subject Id ",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page  ",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/getchapterinfo": {
+      "get": {
+        "tags": [
+          "chapterapi"
+        ],
+        "summary": "chapterapi",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "schoolId",
+            "in": "query",
+            "description": "school ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "gradeId",
+            "in": "query",
+            "description": "grade Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "subjectId",
+            "in": "query",
+            "description": "subject Id ",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "chapterId",
+            "in": "query",
+            "description": "chapterId  ",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page  ",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    },
+    "/directorperformance": {
+      "get": {
+        "tags": [
+          "director api"
+        ],
+        "summary": "director api",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "boardId",
+            "in": "query",
+            "description": "board ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "gradeId",
+            "in": "query",
+            "description": "grade Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "subjectId",
+            "in": "query",
+            "description": "subject Id ",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "chapterId",
+            "in": "query",
+            "description": "chapterId  ",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "format": "int32",
+                "description": "calls per hour allowed by the user"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "format": "date-time",
+                "description": "date in UTC when token expires"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    }
+  }
+}
